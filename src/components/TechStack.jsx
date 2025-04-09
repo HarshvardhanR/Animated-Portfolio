@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import data from "../data";
 
+// Container with stagger
 const containerVariants = {
   hidden: {},
   show: {
@@ -11,6 +12,7 @@ const containerVariants = {
   },
 };
 
+// Individual icon animation
 const itemVariants = {
   hidden: { opacity: 0, x: -100 },
   show: (i) => ({
@@ -24,39 +26,35 @@ const itemVariants = {
   }),
 };
 
-const hoverVariants = {
-  hover: {
-    scale: 1.1,
-    x: 10, 
-    transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 20,
-    },
+// Hover effect
+const hoverVariant = {
+  scale: 1.1,
+  x: 10,
+  transition: {
+    type: "spring",
+    stiffness: 300,
+    damping: 20,
   },
 };
 
+// Row of icons with scroll-in animation
 const Section = ({ items }) => (
   <motion.div
-    key={items.join("-")}
-    className="flex items-center justify-center"
+    className="flex flex-wrap items-center justify-center gap-16"
     variants={containerVariants}
     initial="hidden"
-    animate="show"
     whileInView="show"
-    viewport={{ once: false, amount: 0.5 }}
+    viewport={{ once: false, amount: 0.4 }}
   >
     {items.map((src, i) => (
       <motion.img
-        key={src} // Ensure that every item has a unique key to trigger the animation reset
+        key={src}
         src={src}
         alt=""
-        className="w-16 h-16 object-contain mr-24"
+        className="w-16 h-16 object-contain"
         custom={i}
         variants={itemVariants}
-        whileInView="show"
-        initial="hidden"
-        whileHover={hoverVariants.hover} // Apply hover animation directly
+        whileHover={hoverVariant}
       />
     ))}
   </motion.div>
@@ -64,9 +62,10 @@ const Section = ({ items }) => (
 
 const TechStack = () => {
   const text = "Tech Stack";
+
   return (
     <div className="text-white p-8 space-y-12">
-      {/* Title Animation */}
+      {/* Animated Title */}
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0 }}
@@ -80,10 +79,8 @@ const TechStack = () => {
               key={index}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{
-                opacity: { delay: index * 0.1, duration: 0.5 },
-              }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
               className="inline-block"
             >
               {letter}
@@ -92,7 +89,7 @@ const TechStack = () => {
         </h2>
       </motion.div>
 
-      {/* Tech Stack Sections */}
+      {/* Stacks */}
       <Section items={Object.values(data.programmingLanguages)} />
       <Section items={Object.values(data.frameworksAndLibraries)} />
       <Section items={Object.values(data.developerTools)} />
