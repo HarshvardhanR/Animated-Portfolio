@@ -2,6 +2,32 @@ import moon from './assets/moon.png'
 import uranus from './assets/uranus.png'
 import mars from './assets/mars.png'
 import earth from './assets/earth.png'
+import aws from './assets/aws.svg'
+import azure from './assets/azure.svg'
+import css3 from './assets/css3.svg'
+import docker from './assets/docker.svg'
+import express from './assets/express.svg'
+import git from './assets/git.svg'
+import html from './assets/html.svg'
+import java from './assets/java.svg'
+import javascript from './assets/javascript.svg'
+import maven from './assets/maven.svg'
+import mongoDB from './assets/mongoDB.svg'
+import nodeJS from './assets/nodeJS.svg'
+import npm from './assets/npm.svg'
+import numpy from './assets/numpy.svg'
+import ollama from './assets/ollama.svg'
+import pandas from './assets/pandas.svg'
+import pip from './assets/pip.svg'
+import postgresql from './assets/postgresql.svg'
+import postman from './assets/postman.svg'
+import python from './assets/python.svg'
+import pytorch from './assets/pytorch.svg'
+import react from './assets/react.svg'
+import scss from './assets/scss.svg'
+import tensorflow from './assets/tensorflow.svg'
+import typescript from './assets/typescript.svg'
+
 
 export default{
     text: "Hii, I am Harshvardhansingh Rao",
@@ -36,4 +62,40 @@ export default{
           github: "https://github.com/HarshvardhanR/Flight-Delay-Prediction",
         },
     ],
+    programmingLanguages : {
+      java,
+      javascript,
+      typescript,
+      python,
+      html,
+      css3,
+      scss,
+    },
+    frameworksAndLibraries : {
+      react,
+      express,
+      tensorflow,
+      pytorch,
+      pandas,
+      numpy,
+    },
+    developerTools : {
+      git,
+      postman,
+      npm,
+      pip,
+      maven,
+      ollama,
+    },
+    databases : {
+      mongoDB,
+      postgresql,
+    },
+    devopsAndCloud : {
+      docker,
+      aws,
+      azure,
+    }
+    
+    
 }
