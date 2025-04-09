@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import data from '../data';
+import '../index.css'
 
 const Projects = () => {
   const projects = data.projects;
@@ -46,18 +47,23 @@ const Projects = () => {
                 
                 {/* Image Section */}
                 <motion.div
-                  className="w-1/2"
-                  initial={{ x: isEven ? -100 : 100, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  viewport={{ once: false, amount: 0.3 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className={`w-full h-96 object-cover ${isEven ? 'rounded-l-lg' : 'rounded-r-lg'}`}
-                  />
-                </motion.div>
+                    className="w-1/2"
+                    initial={{ x: isEven ? -100 : 100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    <div className="relative w-full h-96 overflow-hidden">
+                      <motion.img
+                        src={project.image} // Your Earth image here
+                        alt={project.title}
+                        className={`w-full h-full object-cover ${isEven ? 'rounded-l-lg' : 'rounded-r-lg'}`}
+                        style={{
+                          animation: "rotateEarth 10s linear infinite", // Infinite rotation animation
+                        }}
+                      />
+                    </div>
+                  </motion.div>
 
                 {/* Animated Vertical Divider Line */}
                 <motion.div

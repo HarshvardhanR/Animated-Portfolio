@@ -1,4 +1,6 @@
-import image2 from './assets/DSC00966.jpg'
+import moon from './assets/moon.png'
+import uranus from './assets/uranus.png'
+import mars from './assets/mars.png'
 import earth from './assets/earth.png'
 
 export default{
@@ -11,14 +13,28 @@ export default{
         {
           title: "Flight Delay Prediction",
           description: "A brief description of Project One.",
-          image: earth,
+          image: moon,
           github: "https://github.com/yourusername/project-one",
           liveLink: "https://yourwebsite.com/project-one"
         },
         {
           title: "EEG Decoding",
           description: "A brief description of Project Two.",
-          image: image2,
+          image: uranus,
+          github: "https://github.com/yourusername/project-two",
+          liveLink: "https://yourwebsite.com/project-two"
+        },
+        {
+          title: "World War III",
+          description: "A brief description of Project One.",
+          image: earth,
+          github: "https://github.com/yourusername/project-one",
+          liveLink: "https://yourwebsite.com/project-one"
+        },
+        {
+          title: "Banking Management System",
+          description: "A brief description of Project Two.",
+          image: mars,
           github: "https://github.com/yourusername/project-two",
           liveLink: "https://yourwebsite.com/project-two"
         },
