@@ -1,4 +1,5 @@
 import moon from './assets/moon.png'
+import flask from './assets/flask.svg'
 import uranus from './assets/uranus.png'
 import mars from './assets/mars.png'
 import earth from './assets/earth.png'
@@ -79,6 +80,7 @@ export default{
       pandas,
       numpy,
       nodeJS,
+      flask,
     },
     developerTools : {
       git,

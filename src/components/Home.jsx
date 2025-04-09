@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion';
-
 import data from '../data';
 import Projects from './Projects';
 import Info from './Info'
+import TechStack from './TechStack';
 
 const COLORS = data.colors;
 
@@ -24,10 +24,9 @@ const Home = () => {
   }, [color]);
 
   return (
-    <motion.div
-      style={{ backgroundImage: bgImage }}
-    >
+    <motion.div style={{ backgroundImage: bgImage }}>
       <Info />
+      <TechStack />
       <Projects />
     </motion.div>
   );
