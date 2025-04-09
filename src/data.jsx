@@ -78,6 +78,7 @@ export default{
       pytorch,
       pandas,
       numpy,
+      nodeJS,
     },
     developerTools : {
       git,
