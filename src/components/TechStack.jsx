@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import data from "../data";
 
-// Container with stagger
 const containerVariants = {
   hidden: {},
   show: {
@@ -12,7 +11,6 @@ const containerVariants = {
   },
 };
 
-// Individual icon animation
 const itemVariants = {
   hidden: { opacity: 0, x: -100 },
   show: (i) => ({
@@ -26,7 +24,6 @@ const itemVariants = {
   }),
 };
 
-// Hover effect
 const hoverVariant = {
   scale: 1.1,
   x: 10,
@@ -37,7 +34,6 @@ const hoverVariant = {
   },
 };
 
-// Row of icons with scroll-in animation
 const Section = ({ items }) => (
   <motion.div
     className="flex flex-wrap items-center justify-center gap-16"
@@ -65,7 +61,6 @@ const TechStack = () => {
 
   return (
     <div className="text-white p-8 space-y-12">
-      {/* Animated Title */}
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0 }}

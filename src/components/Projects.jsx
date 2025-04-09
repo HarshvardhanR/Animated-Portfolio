@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import data from '../data';
@@ -12,7 +11,6 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 py-12">
-      {/* Title Animation */}
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0 }}
@@ -35,7 +33,6 @@ const Projects = () => {
         </h2>
       </motion.div>
 
-      {/* Projects Grid */}
       <div className="flex flex-col items-center justify-center gap-16 px-4">
         {projects.map((project, index) => {
           const isEven = index % 2 === 0;
@@ -56,7 +53,7 @@ const Projects = () => {
                   >
                     <div className="relative w-full h-96 overflow-hidden">
                       <motion.img
-                        src={project.image} // Your Earth image here
+                        src={project.image} 
                         alt={project.title}
                         className={`w-full h-full object-cover ${isEven ? 'rounded-l-lg' : 'rounded-r-lg'}`}
                         style={{
@@ -66,7 +63,7 @@ const Projects = () => {
                     </div>
                   </motion.div>
 
-                {/* Animated Vertical Divider Line */}
+                
                 <motion.div
                   className="w-1 bg-white rounded-full"
                   initial={{ scaleY: 0 }}
@@ -76,7 +73,7 @@ const Projects = () => {
                   style={{ transformOrigin: 'top' }}
                 />
 
-                {/* Content Section */}
+              
                 <motion.div
                   className="w-1/2 p-6 flex flex-col justify-center"
                   initial={{ x: isEven ? 100 : -100, opacity: 0 }}

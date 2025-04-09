@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import {motion} from 'framer-motion';
 import { FaGithub, FaLinkedin, FaCode } from 'react-icons/fa';
 import data from '../data'
@@ -23,7 +22,6 @@ const Info = () =>{
         ))}
       </div>
 
-      {/* Animated Icons */}
       <div className="flex space-x-6 mt-6">
         <motion.a
           href={data.github}
@@ -53,11 +51,11 @@ const Info = () =>{
           whileHover={{ scale: 1.2 }}
         >
           <motion.div
-            animate={{ y: [0, -10, 0] }} // Popping up and down effect
+            animate={{ y: [0, -10, 0] }} 
             transition={{
               duration: 1,
-              delay: 1.2, // Starts after 1.2 seconds (after GitHub animation)
-              repeat: Infinity, // Do not repeat animation
+              delay: 1.2, 
+              repeat: Infinity, 
               ease: 'easeInOut',
             }}
           >
@@ -73,11 +71,11 @@ const Info = () =>{
           whileHover={{ scale: 1.2 }}
         >
           <motion.div
-            animate={{ y: [0, -10, 0] }} // Popping up and down effect
+            animate={{ y: [0, -10, 0] }}
             transition={{
               duration: 1,
-              delay: 2.4, // Starts after 2.4 seconds (after LeetCode animation)
-              repeat: Infinity, // Do not repeat animation
+              delay: 2.4, 
+              repeat: Infinity, 
               ease: 'easeInOut',
             }}
           >
