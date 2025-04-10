@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import data from '../data';
-import '../index.css'
+import '../index.css';
 
 const Projects = () => {
   const projects = data.projects;
@@ -45,25 +45,24 @@ const Projects = () => {
                 
                 {/* Image Section */}
                 <motion.div
-                    className="w-1/2"
-                    initial={{ x: isEven ? -100 : 100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: false, amount: 0.3 }}
-                    transition={{ duration: 0.8 }}
-                  >
-                    <div className="relative w-full h-96 overflow-hidden">
-                      <motion.img
-                        src={project.image} 
-                        alt={project.title}
-                        className={`w-full h-full object-cover ${isEven ? 'rounded-l-lg' : 'rounded-r-lg'}`}
-                        style={{
-                          animation: "rotateEarth 10s linear infinite",
-                        }}
-                      />
-                    </div>
-                  </motion.div>
+                  className="w-1/2"
+                  initial={{ x: isEven ? -100 : 100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: false, amount: 0.3 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <div className="relative w-full h-96 overflow-hidden">
+                    <motion.img
+                      src={project.image}
+                      alt={project.title}
+                      className={`w-full h-full object-cover ${isEven ? 'rounded-l-lg' : 'rounded-r-lg'}`}
+                      style={{
+                        animation: "rotateEarth 10s linear infinite",
+                      }}
+                    />
+                  </div>
+                </motion.div>
 
-                
                 <motion.div
                   className="w-1 bg-white rounded-full"
                   initial={{ scaleY: 0 }}
@@ -73,7 +72,7 @@ const Projects = () => {
                   style={{ transformOrigin: 'top' }}
                 />
 
-              
+                {/* Text Section */}
                 <motion.div
                   className="w-1/2 p-6 flex flex-col justify-center"
                   initial={{ x: isEven ? 100 : -100, opacity: 0 }}
@@ -96,6 +95,16 @@ const Projects = () => {
                         <FaGithub />
                       </motion.a>
                     )}
+
+                    {project.svgs && project.svgs.map((Svg, svgIndex) => (
+                      <motion.div
+                        key={svgIndex}
+                        className="text-white text-2xl"
+                        whileHover={{ scale: 1.2 }}
+                      >
+                        <img src={Svg} alt={`SVG ${svgIndex}`} className="w-8 h-8" />
+                      </motion.div>
+                    ))}
                   </div>
                 </motion.div>
               </div>
