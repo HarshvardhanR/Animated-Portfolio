@@ -36,7 +36,7 @@ const hoverVariant = {
 
 const Section = ({ items, title }) => (
   <div className="space-y-8">
-    {/* Title for each section */}
+    {/* Section Title */}
     <motion.div
       className="text-center"
       initial={{ opacity: 0 }}
@@ -44,7 +44,7 @@ const Section = ({ items, title }) => (
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 1.5 }}
     >
-      <h3 className="text-2xl font-bold text-white font-inter italic">
+      <h3 className="text-xl sm:text-2xl font-bold text-white font-inter italic">
         {title.split("").map((letter, index) => (
           <motion.span
             key={index}
@@ -54,15 +54,15 @@ const Section = ({ items, title }) => (
             transition={{ delay: index * 0.05, duration: 0.5 }}
             className="inline-block"
           >
-            {letter === " " ? "\u00A0": letter}
+            {letter === " " ? "\u00A0" : letter}
           </motion.span>
         ))}
       </h3>
     </motion.div>
 
-    {/* Stacks */}
+    {/* Stack Icons */}
     <motion.div
-      className="flex flex-wrap items-center justify-center gap-16"
+      className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 md:gap-16"
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
@@ -73,7 +73,7 @@ const Section = ({ items, title }) => (
           key={src}
           src={src}
           alt=""
-          className="w-16 h-16 object-contain"
+          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
           custom={i}
           variants={itemVariants}
           whileHover={hoverVariant}
@@ -87,15 +87,16 @@ const TechStack = () => {
   const text = "Tech Stack";
 
   return (
-    <div className="text-white p-8 space-y-12">
+    <div className="text-white px-4 py-12 sm:px-6 md:px-12 lg:px-24 space-y-12">
+      {/* Main Heading */}
       <motion.div
-        className="text-center mb-16"
+        className="text-center mb-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 1.5 }}
       >
-        <h2 className="text-6xl font-bold text-white font-dancing">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold font-dancing text-white">
           {text.split("").map((letter, index) => (
             <motion.span
               key={index}
@@ -111,7 +112,7 @@ const TechStack = () => {
         </h2>
       </motion.div>
 
-      {/* Stacks with Titles */}
+      {/* Skill Sections */}
       <Section items={Object.values(data.programmingLanguages)} title="Programming Languages" />
       <Section items={Object.values(data.frameworksAndLibraries)} title="Frameworks & Libraries" />
       <Section items={Object.values(data.developerTools)} title="Developer Tools" />

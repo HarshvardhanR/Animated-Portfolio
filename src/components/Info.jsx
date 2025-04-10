@@ -1,15 +1,15 @@
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaCode } from 'react-icons/fa';
-import data from '../data'
+import data from '../data';
 
-const Info = () =>{
+const Info = () => {
+  const text = data.text;
+  const textArray = text.split('');
 
-    const text = data.text;
-    const textArray = text.split('');
-
-    return(
-        <div className="flex flex-col items-center justify-center p-8 min-h-screen">
-      <div className="text-6xl font-bold text-white font-dancing">
+  return (
+    <div className="flex flex-col items-center justify-center px-4 py-16 sm:px-6 md:px-8 min-h-screen">
+      {/* Animated Text */}
+      <div className="text-3xl sm:text-4xl md:text-6xl font-bold text-white font-dancing text-center break-words max-w-screen-sm sm:max-w-screen-md">
         {textArray.map((letter, index) => (
           <motion.span
             key={index}
@@ -22,19 +22,20 @@ const Info = () =>{
         ))}
       </div>
 
-      <div className="flex space-x-6 mt-6">
+      {/* Social Icons */}
+      <div className="flex flex-wrap justify-center items-center gap-6 mt-10">
+        {/* GitHub */}
         <motion.a
           href={data.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white text-3xl"
+          className="text-white text-3xl sm:text-4xl"
           whileHover={{ scale: 1.2 }}
         >
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{
               duration: 1,
-              delay: 0,
               repeat: Infinity,
               ease: 'easeInOut',
             }}
@@ -43,19 +44,20 @@ const Info = () =>{
           </motion.div>
         </motion.a>
 
+        {/* LeetCode */}
         <motion.a
           href={data.leetcode}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white text-3xl"
+          className="text-white text-3xl sm:text-4xl"
           whileHover={{ scale: 1.2 }}
         >
           <motion.div
-            animate={{ y: [0, -10, 0] }} 
+            animate={{ y: [0, -10, 0] }}
             transition={{
               duration: 1,
-              delay: 1.2, 
-              repeat: Infinity, 
+              delay: 0.4,
+              repeat: Infinity,
               ease: 'easeInOut',
             }}
           >
@@ -63,19 +65,20 @@ const Info = () =>{
           </motion.div>
         </motion.a>
 
+        {/* LinkedIn */}
         <motion.a
           href={data.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white text-3xl"
+          className="text-white text-3xl sm:text-4xl"
           whileHover={{ scale: 1.2 }}
         >
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{
               duration: 1,
-              delay: 2.4, 
-              repeat: Infinity, 
+              delay: 0.8,
+              repeat: Infinity,
               ease: 'easeInOut',
             }}
           >
@@ -83,8 +86,8 @@ const Info = () =>{
           </motion.div>
         </motion.a>
       </div>
-      </div>
-    )
-}
+    </div>
+  );
+};
 
 export default Info;
