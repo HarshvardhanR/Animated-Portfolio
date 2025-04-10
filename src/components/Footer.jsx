@@ -8,23 +8,26 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col items-center justify-center p-8 bg-gray-900 text-white">
-      {/* Animated "Let's Connect" text */}
-      <div className="text-4xl font-bold font-dancing">
+      <motion.div
+        className="text-4xl font-bold font-dancing"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.5 }}
+      >
         {textArray.map((letter, index) => (
           <motion.span
             key={index}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: index * 0.05, duration: 0.3 }}
+            transition={{ delay: index * 0.05, duration: 1 }}
           >
             {letter}
           </motion.span>
         ))}
-      </div>
+      </motion.div>
 
-      {/* Social Media Links */}
       <div className="flex space-x-6 mt-6">
-        {/* LinkedIn */}
         <motion.a
           href={data.linkedin}
           target="_blank"
@@ -34,12 +37,11 @@ const Footer = () => {
           <FaLinkedin />
         </motion.a>
 
-        {/* Email */}
         <motion.a
-          href={`mailto:${data.email}`} // Correctly formatted mailto link
+          href={`mailto:${data.email}`} 
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white text-3xl flex items-center space-x-2" // Added flex and space for proper alignment
+          className="text-white text-3xl flex items-center space-x-2"
         >
           <FaEnvelope />
           {/* Display email text */}

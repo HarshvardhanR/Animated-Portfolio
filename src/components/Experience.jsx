@@ -9,7 +9,6 @@ const Experience = () => {
 
   return (
     <div className="bg-gray-900 p-8 mb-12 py-12">
-      {/* Section title */}
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0 }}
@@ -32,7 +31,6 @@ const Experience = () => {
         </h2>
       </motion.div>
 
-      {/* Experience items */}
       <div className="flex flex-col items-center gap-16 px-4">
         {exp.map((job, index) => (
           <motion.div
@@ -43,7 +41,6 @@ const Experience = () => {
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.8 }}
           >
-            {/* Left: Company Info */}
             <div className="md:w-1/3 text-white flex flex-col justify-center font-roboto">
             <h2 className="text-xl font-semibold">{job.role}</h2>
               <h3 className="text-xl font-semibold">{job.company}</h3>
@@ -51,7 +48,6 @@ const Experience = () => {
               <p className="text-gray-400">{job.date}</p>
             </div>
 
-            {/* Vertical Line */}
             <motion.div
               className="w-1 bg-white rounded-full"
               initial={{ scaleY: 0 }}
@@ -61,7 +57,6 @@ const Experience = () => {
               style={{ transformOrigin: 'top' }}
             />
 
-            {/* Right: Description */}
             <div className="md:w-2/3 text-white flex items-center font-roboto">
               <p>{job.description}</p>
             </div>
