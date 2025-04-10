@@ -8,7 +8,7 @@ const Experience = () => {
   const splitText = text.split("");
 
   return (
-    <div className="min-h-screen bg-gray-900 py-12">
+    <div className="bg-gray-900 p-8 mb-12 py-12">
       {/* Section title */}
       <motion.div
         className="text-center mb-16"

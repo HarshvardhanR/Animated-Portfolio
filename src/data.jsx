@@ -32,6 +32,7 @@ import typescript from './assets/typescript.svg'
 
 export default{
     text: "Hii, I am Harshvardhansingh Rao",
+    email: "raoharsh2801@gmail.com",
     profession: ["Full Stack Developer", "Software Developer"],
     colors: ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"],
     github: "https://github.com/HarshvardhanR",
