@@ -57,7 +57,7 @@ const Projects = () => {
                         alt={project.title}
                         className={`w-full h-full object-cover ${isEven ? 'rounded-l-lg' : 'rounded-r-lg'}`}
                         style={{
-                          animation: "rotateEarth 10s linear infinite", // Infinite rotation animation
+                          animation: "rotateEarth 10s linear infinite",
                         }}
                       />
                     </div>
@@ -81,8 +81,8 @@ const Projects = () => {
                   viewport={{ once: false, amount: 0.3 }}
                   transition={{ duration: 0.8 }}
                 >
-                  <h3 className="text-2xl font-semibold text-white">{project.title}</h3>
-                  <p className="text-gray-400 mt-2 text-white">{project.description}</p>
+                  <h3 className="text-2xl font-semibold text-white font-roboto">{project.title}</h3>
+                  <p className="text-gray-400 mt-2 text-white font-roboto">{project.description}</p>
 
                   <div className="flex gap-6 mt-4">
                     {project.github && (

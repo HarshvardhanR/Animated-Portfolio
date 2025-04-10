@@ -34,26 +34,53 @@ const hoverVariant = {
   },
 };
 
-const Section = ({ items }) => (
-  <motion.div
-    className="flex flex-wrap items-center justify-center gap-16"
-    variants={containerVariants}
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: false, amount: 0.4 }}
-  >
-    {items.map((src, i) => (
-      <motion.img
-        key={src}
-        src={src}
-        alt=""
-        className="w-16 h-16 object-contain"
-        custom={i}
-        variants={itemVariants}
-        whileHover={hoverVariant}
-      />
-    ))}
-  </motion.div>
+const Section = ({ items, title }) => (
+  <div className="space-y-8">
+    {/* Title for each section */}
+    <motion.div
+      className="text-center"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 1.5 }}
+    >
+      <h3 className="text-2xl font-bold text-white font-inter">
+        {title.split("").map((letter, index) => (
+          <motion.span
+            key={index}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ delay: index * 0.05, duration: 0.5 }}
+            className="inline-block"
+          >
+            {letter === " " ? "\u00A0": letter}
+          </motion.span>
+        ))}
+      </h3>
+    </motion.div>
+
+    {/* Stacks */}
+    <motion.div
+      className="flex flex-wrap items-center justify-center gap-16"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.4 }}
+    >
+      {items.map((src, i) => (
+        <motion.img
+          key={src}
+          src={src}
+          alt=""
+          className="w-16 h-16 object-contain"
+          custom={i}
+          variants={itemVariants}
+          whileHover={hoverVariant}
+        />
+      ))}
+    </motion.div>
+  </div>
 );
 
 const TechStack = () => {
@@ -84,12 +111,12 @@ const TechStack = () => {
         </h2>
       </motion.div>
 
-      {/* Stacks */}
-      <Section items={Object.values(data.programmingLanguages)} />
-      <Section items={Object.values(data.frameworksAndLibraries)} />
-      <Section items={Object.values(data.developerTools)} />
-      <Section items={Object.values(data.databases)} />
-      <Section items={Object.values(data.devopsAndCloud)} />
+      {/* Stacks with Titles */}
+      <Section items={Object.values(data.programmingLanguages)} title="Programming Languages" />
+      <Section items={Object.values(data.frameworksAndLibraries)} title="Frameworks & Libraries" />
+      <Section items={Object.values(data.developerTools)} title="Developer Tools" />
+      <Section items={Object.values(data.databases)} title="Databases" />
+      <Section items={Object.values(data.devopsAndCloud)} title="DevOps & Cloud" />
     </div>
   );
 };

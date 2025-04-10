@@ -32,6 +32,7 @@ import typescript from './assets/typescript.svg'
 
 export default{
     text: "Hii, I am Harshvardhansingh Rao",
+    profession: ["Full Stack Developer", "Software Developer"],
     colors: ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"],
     github: "https://github.com/HarshvardhanR",
     linkedin: "https://www.linkedin.com/in/harshvardhansingh-rao-a63929222/",
@@ -63,6 +64,13 @@ export default{
           github: "https://github.com/HarshvardhanR/Flight-Delay-Prediction",
         },
     ],
+    experience:[{
+      role:"Python Developer Intern",
+      company : "Media Platforms",
+      date : "June 2021 - July 2021",
+      location: "Toronto (Remote)",
+      description: "Python Developer Intern with experience in enhancing front-end interfaces using HTML for improved cross-device performance. Streamlined backend logic and optimized MongoDB queries to improve response times and data retrieval efficiency. Contributed to user interface revamp, focusing on simplified navigation and better usability. Integrated Python and Django backend services with front-end components to ensure smooth and responsive application performance."
+    }],
     programmingLanguages : {
       java,
       javascript,

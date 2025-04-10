@@ -4,6 +4,7 @@ import data from '../data';
 import Projects from './Projects';
 import Info from './Info';
 import TechStack from './TechStack';
+import Experience from './Experience'
 
 const COLORS = data.colors;
 
@@ -64,6 +65,7 @@ const Home = () => {
         <Info />
         <TechStack />
         <Projects />
+        <Experience />
       </div>
     </motion.div>
   );

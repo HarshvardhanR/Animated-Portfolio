@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         dancing: ['Dancing Script', 'cursive'],
         lobster: ['Lobster', 'cursive'],
+        roboto: ['Roboto'],
+        playfair: ['"Playfair Display"', 'serif'],
+        inter: ['"Inter"', 'sans-serif'],
       },
       colors: {
         'main': '#e002a2',
