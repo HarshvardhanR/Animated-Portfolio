@@ -44,7 +44,7 @@ const Section = ({ items, title }) => (
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 1.5 }}
     >
-      <h3 className="text-2xl font-bold text-white font-inter">
+      <h3 className="text-2xl font-bold text-white font-inter italic">
         {title.split("").map((letter, index) => (
           <motion.span
             key={index}
