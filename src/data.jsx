@@ -69,12 +69,20 @@ export default{
           svgs: [python, flask, html, css3]
         },
     ],
-    experience:[{
-      role:"Python Developer Intern",
+    experience:[
+    {
+      role:"Software Developer Intern",
+      company : "Majestic AI",
+      date : "Jan 2023 - July 2023",
+      location: "Surat, Gujarat (India) ",
+      description: "Developed and deployed full-stack web applications using the MERN stack (MongoDB, Express, React, Node.js). Translated Figma designs into responsive, user-friendly UI components. Built and integrated RESTful APIs to enhance performance and streamline operations. Implemented role-based authentication, input validation, and centralized error handling to improve security and maintainability. Contributed to Agile sprints and supported CI/CD pipeline setup for efficient and reliable delivery."
+    },
+    {
+      role:"Full Stack Developer Intern",
       company : "Media Platforms",
       date : "June 2021 - July 2021",
       location: "Toronto (Remote)",
-      description: "Python Developer Intern with experience in enhancing front-end interfaces using HTML for improved cross-device performance. Streamlined backend logic and optimized MongoDB queries to improve response times and data retrieval efficiency. Contributed to user interface revamp, focusing on simplified navigation and better usability. Integrated Python and Django backend services with front-end components to ensure smooth and responsive application performance."
+      description: "Enhanced front-end interfaces using HTML, CSS, and JavaScript to improve load speed and deliver seamless performance across devices. Optimized MongoDB queries and refined algorithm logic to enable faster data filtering and retrieval. Revamped user interfaces to simplify navigation and improve filter usability for a more intuitive experience. Integrated Python and Django backend services with front-end applications to reduce API latency and boost overall system responsiveness."
     }],
     programmingLanguages : {
       java,
