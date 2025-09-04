@@ -80,7 +80,7 @@ export default{
     {
       role:"Full Stack Developer Intern",
       company : "Media Platforms",
-      date : "June 2021 - July 2021",
+      date : "June 2021 - November 2021",
       location: "Toronto (Remote)",
       description: "Enhanced front-end interfaces using HTML, CSS, and JavaScript to improve load speed and deliver seamless performance across devices. Optimized MongoDB queries and refined algorithm logic to enable faster data filtering and retrieval. Revamped user interfaces to simplify navigation and improve filter usability for a more intuitive experience. Integrated Python and Django backend services with front-end applications to reduce API latency and boost overall system responsiveness."
     }],
